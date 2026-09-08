@@ -1,0 +1,6 @@
+{
+  "name": "tailscale-app",
+  "scripts": {
+    "start": "bash start.sh && node server.js"
+  }
+}
