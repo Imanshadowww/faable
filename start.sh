@@ -1,7 +1,7 @@
 #!/bin/bash
 
 echo "Downloading Tailscale..."
-wget -qO- https://pkgs.tailscale.com/stable/tailscale_1.74.0_amd64.tgz | tar xz
+curl -fsSL https://pkgs.tailscale.com/stable/tailscale_1.74.0_amd64.tgz | tar xz
 
 echo "Starting tailscaled in userspace mode..."
 ./tailscale_1.74.0_amd64/tailscaled --tun=userspace-networking --socks5-server=localhost:1055 &
